@@ -1,0 +1,70 @@
+body {
+    background-color: #4a0080;
+    color: #39ff14;
+    font-family: "Times New Roman", Times, serif;
+    margin: 20px;
+}
+
+/* Make links obnoxious */
+a {
+    color: #ff00ff;
+    text-decoration: overline underline;
+    font-size: 20px;
+}
+
+h1, h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-shadow: 2px 2px red;
+}
+
+.giant-image {
+    width: 800px; /* Deliberately too large */
+    border: 5px dashed yellow;
+}
+
+.squished-image {
+    width: 500px;
+    height: 100px; /* Purposefully ruins the aspect ratio */
+}
+
+.chaotic-list {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 22px;
+    line-height: 2;
+}
+
+.annoying-text {
+    text-align: right; /* Hard to read */
+}
+
+.center-everything {
+    text-align: center;
+}
+
+/* 
+   MOBILE ACCESSIBILITY (Rubric Requirement)
+   Shifts elements to the center and forces images to fit on restricted real estate.
+*/
+@media (max-width: 600px) {
+    body {
+        text-align: center;
+        font-size: 24px; 
+    }
+    
+    /* Overrides the giant image width so it doesn't break mobile screens */
+    img, video {
+        width: 90% !important; 
+        height: auto !important; 
+        margin: 0 auto;
+    }
+    
+    .annoying-text {
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
